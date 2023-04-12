@@ -1,5 +1,4 @@
-
-body{
+body {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -24,37 +23,5 @@ header {
   align-items: center;
 }
 
-
-/* Footer */
-
-footer {
-  text-align: center;
-  border-top: 2px solid;
-  padding: 1rem;
-}
-
-footer p {
-  margin: 0;
-}
-
-.ft1-p1 {
-  font-size: 14px;
-}
-
-.ft1-p2 {
-  font-size: 12px;
-}
-
-.ft1-p3 {
-  font-size: 10px;
-}
-
-.ft-img figure {
-  width: 70px;
-  margin: 0 auto;
-}
-
-
-@media (min-width:768px) {
-  
+@media (min-width: 768px) {
 }
