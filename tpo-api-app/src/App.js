@@ -17,9 +17,11 @@ function App() {
             <figure><img src="img/Logo.png" alt="logo-imagen"/></figure>
           </div>
         </div> */}
+        
       </header>
 
       <main></main>
+
       <Footer />
     </div>
   );
