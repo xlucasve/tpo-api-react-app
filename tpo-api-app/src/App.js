@@ -1,9 +1,7 @@
 import "./css/App.css";
-/* 
-import portafolio from "./components/portafolio.jsx";
-import contacto from "./components/contacto.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.css"; */
+
+import Header from "./shared/mainNavegacion/MainHeader";
+
 
 import Footer from "./shared/mainNavegacion/Footer";
 
@@ -17,7 +15,7 @@ function App() {
             <figure><img src="img/Logo.png" alt="logo-imagen"/></figure>
           </div>
         </div> */}
-        
+        <Header></Header>
       </header>
 
       <main></main>
