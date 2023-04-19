@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./MainHeader.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const navRef = useRef();
@@ -14,9 +15,9 @@ function Navbar() {
       <h3>Von Elm - Mendieta</h3>
       {/* Centrar el texto de los botones */}
       <nav ref={navRef}>
-        <a href="/MyWork">Portfolio</a>
-        <a href="/#">Contacto</a>
-        <a href="/#">Login</a>
+        <Link to="/MyWork">Portfolio</Link>
+        <Link to="/#">Contacto</Link>
+        <Link to="/login">Login</Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

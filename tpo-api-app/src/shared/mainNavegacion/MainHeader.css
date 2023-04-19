@@ -83,7 +83,7 @@ nav {
     right: 2rem;
   }
 
-  nav a {
+  nav Link {
     font-size: 1.5rem;
   }
 }
