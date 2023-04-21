@@ -1,13 +1,11 @@
-import React from 'react';
-import Header from "../mainNavegacion/MainHeader";
+import React from "react";
 
 const Login = () => {
-    return (
-        <div>
-            <Header></Header>
-            asdas
-        </div>
-    );
-}
+  return (
+    <div>
+      <h1>Pagina de Login</h1>
+    </div>
+  );
+};
 
 export default Login;

@@ -15,8 +15,8 @@ function Navbar() {
       <h3>Von Elm - Mendieta</h3>
       {/* Centrar el texto de los botones */}
       <nav ref={navRef}>
-        <Link to="/MyWork">Portfolio</Link>
-        <Link to="/#">Contacto</Link>
+        <Link to="/">Portfolio</Link>
+        <Link to="/contacto">Contacto</Link>
         <Link to="/login">Login</Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
