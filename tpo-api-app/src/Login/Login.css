@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.loginButton {
+    transition: all ease 1s !important;
+}
+
+.loginButton:hover {
+    transform: translateY(-10px);
+}
+

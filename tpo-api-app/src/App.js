@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./shared/mainNavegacion/MainHeader";
 import Footer from "./shared/mainNavegacion/Footer";
-import Login from "./shared/Login/Login";
+import Login from "./Login/Login";
 import Portfolio from "./Portfolio/pages/Portfolio";
 import Contacto from "./Contacto/pages/Contacto";
 

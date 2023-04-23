@@ -34,6 +34,10 @@ nav a:hover {
   color: var(--secondaryColor);
 }
 
+header nav {
+  z-index: 2;
+}
+
 header .nav-btn {
   padding: 5px;
   cursor: pointer;
