@@ -1,5 +1,9 @@
 /* Footer */
 
+img {
+  width: 100%;
+}
+
 footer {
   text-align: center;
   border-top: 2px solid black;
@@ -26,6 +30,6 @@ footer p {
 }
 
 .ft-img figure {
-  width: 70px;
+  width: 80px;
   margin: 0 auto;
 }
