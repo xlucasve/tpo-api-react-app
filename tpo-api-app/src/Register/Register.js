@@ -16,7 +16,7 @@ const Login = () => {
 
   return (
     <div className="divLogin">
-      <h1>Iniciar Sesion</h1>
+      <h1>Registro</h1>
         <form>
           <TextField id="outlined-basic" className="nombreEmpresa" label="Email" variant="outlined" name="email"/>
           <TextField id="outlined-basic" label="Contraseña" variant="outlined" type="Password"/>

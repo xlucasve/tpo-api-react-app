@@ -11,11 +11,6 @@ const Footer = () => {
         </div>
         <p class="ft1-p2">Todos los derechos reservados.</p>
       </div>
-      <div class="ft-img">
-        <figure>
-          <img src="img/Logo.png" alt="logo-imagen" />
-        </figure>
-      </div>
     </footer>
   );
 };

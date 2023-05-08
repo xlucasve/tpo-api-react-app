@@ -9,9 +9,10 @@
 
 :root {
   --mainColor: #320b0c;
-  --mainColorLight: #320b0c;
-  --secondaryColor: #db2b39;
-  --textColor: #eee;
+  --mainColorLight: #C2C1C2;
+  --secondaryColor: #4E0504;
+  --textColor: #0F0F0F;
+  --thirdColor: #2D2E2E;
 }
 
 header {
@@ -21,20 +22,21 @@ header {
   height: 80px;
   padding: 0 2rem;
   background-color: var(--mainColor);
-  color: var(--textColor);
+  color: var(--mainColorLight);
 }
 
 nav a {
   margin: 0 1rem;
-  color: var(--textColor);
+  color: var(--mainColorLight);
   text-decoration: none;
 }
 
 nav a:hover {
-  color: var(--secondaryColor);
+  color: var(--mainColorLight);
 }
 
 header nav {
+  margin-right: 80px;
   z-index: 2;
 }
 
@@ -44,7 +46,7 @@ header .nav-btn {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor);
+  color: var(--mainColorLight);
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
