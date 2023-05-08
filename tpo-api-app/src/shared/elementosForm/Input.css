@@ -15,11 +15,17 @@
 
 .form-control input,
 .form-control textarea {
-  width: 100%;
+  width: 400px;
   font: inherit;
   border: 1px solid #ccc;
   background: #f8f8f8;
   padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+}
+
+.form-control textarea {
+  resize: none;
+  height: 100%;
 }
 
 .form-control input:focus,
@@ -38,4 +44,16 @@
 .form-control--invalid textarea {
   border-color: red;
   background: #ffd1d1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .form-control input,
+  .form-control textarea {
+    width: 300px;
+    font: inherit;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    padding: 0.15rem 0.25rem;
+    border-radius: 4px;
+  }
 }
