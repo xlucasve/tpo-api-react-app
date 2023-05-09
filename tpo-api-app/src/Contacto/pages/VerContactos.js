@@ -8,6 +8,7 @@ const contactoTest = [
     nombreReclutador: "NombreReclutador1",
     correoReclutador: "CorreoReclutador1",
     telefonoReclutador: "TelefonoReclutador1",
+    tituloPuesto: "TituloPuesto1",
     descripcionPuesto: "DescripcionPuesto1",
     montoOfrecido: "MontoOFrecido1",
   },
@@ -17,6 +18,7 @@ const contactoTest = [
     nombreReclutador: "NombreReclutador2",
     correoReclutador: "CorreoReclutador2",
     telefonoReclutador: "TelefonoReclutador2",
+    tituloPuesto: "TituloPuesto2",
     descripcionPuesto: "DescripcionPuesto2",
     montoOfrecido: "MontoOFrecido2",
   },
@@ -26,6 +28,7 @@ const contactoTest = [
     nombreReclutador: "NombreReclutador3",
     correoReclutador: "CorreoReclutador3",
     telefonoReclutador: "TelefonoReclutador3",
+    tituloPuesto: "TituloPuesto3",
     descripcionPuesto: "DescripcionPuesto3",
     montoOfrecido: "MontoOFrecido3",
   },
@@ -43,6 +46,7 @@ const VerContactos = () => {
             nombreReclutador={contacto.nombreReclutador}
             correoReclutador={contacto.correoReclutador}
             telefonoReclutador={contacto.telefonoReclutador}
+            tituloPuesto={contacto.tituloPuesto}
             descripcionPuesto={contacto.descripcionPuesto}
             montoOfrecido={contacto.montoOfrecido}
           />

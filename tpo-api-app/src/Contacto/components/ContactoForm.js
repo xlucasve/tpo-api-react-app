@@ -29,6 +29,10 @@ const ContactoForm = () => {
         value: "",
         isValid: false,
       },
+      tituloPuesto: {
+        value: "",
+        isValid: false,
+      },
       descripcionPuesto: {
         value: "",
         isValid: false,
@@ -82,6 +86,14 @@ const ContactoForm = () => {
         label="Telefono de contacto"
         validators={[VALIDATOR_MINLENGTH(6)]}
         errorText="Ingrese un número válido (min. 6 caracteres)"
+        onInput={inputHandler}
+      />
+      <Input
+        id="tituloPuesto"
+        element="input"
+        label="Titulo de Puesto"
+        validators={[VALIDATOR_REQUIRE()]}
+        errorText="Por favor ingresar un titulo de puesto."
         onInput={inputHandler}
       />
       <Input
