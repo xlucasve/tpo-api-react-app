@@ -1,0 +1,12 @@
+.item-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.texto {
+  font: arial;
+  font-size: large;
+  align-items: center;
+}
