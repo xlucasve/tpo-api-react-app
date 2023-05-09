@@ -1,7 +1,7 @@
 import React from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import "./Login.css";
+import "./Register.css";
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 
 const theme = createTheme({
