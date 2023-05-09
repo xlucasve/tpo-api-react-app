@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "./shared/mainNavegacion/MainHeader";
 import Footer from "./shared/mainNavegacion/Footer";
@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Portfolio />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </div>
