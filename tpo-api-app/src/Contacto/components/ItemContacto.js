@@ -5,13 +5,13 @@ import "./ItemContacto.css";
 const ItemContacto = (props) => {
   return (
     <div className="item-contacto">
-      <h1>{props.nombreEmpresa}</h1>
-      <p className="texto">{props.nombreReclutador}</p>
-      <p className="texto">{props.correoReclutador}</p>
-      <p className="texto">{props.telefonoReclutador}</p>
-      <p className="texto">{props.tituloPuesto}</p>
-      <p className="texto">{props.descripcionPuesto}</p>
-      <p className="texto">{props.montoOfrecido}</p>
+      <h1 className="titulo">{props.nombreEmpresa}</h1>
+      <p className="texto">Reclutador: {props.nombreReclutador}</p>
+      <p className="texto">Correo: {props.correoReclutador}</p>
+      <p className="texto">Tel: {props.telefonoReclutador}</p>
+      <p className="texto">Titulo: {props.tituloPuesto}</p>
+      <p className="texto">Descripcion: {props.descripcionPuesto}</p>
+      <p className="texto">Monto: {props.montoOfrecido}</p>
     </div>
   );
 };
