@@ -1,12 +1,72 @@
 import React from "react";
 import "./Portfolio.css";
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider  } from '@mui/material/styles';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
 
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#db2b39',
+    },
+  } 
+});
 
 const Portfolio = () => {
+
+
   return (
     <div>
-      <h1>Pagina de Portfolio</h1>
-      <h2>Tecnologias</h2>
+      <h1>Introduccion</h1>
+
+      <div className="introduction">
+
+        <figure className="ft-perfil"><img src="img/foto.jpg" alt="github"/></figure>
+        
+        <div className="introduction-data">
+          <div className="typewriter">
+            <h1>I'm Juan Ignacio Mendieta</h1>
+          </div>
+          <ThemeProvider theme={theme}>
+            <a href="img/Juan Ignacio Mendieta.pdf" download="Curriculum Juan Ignacio Mendieta"><Button variant="outlined" className="bt-download">Descargar CV</Button></a>
+          </ThemeProvider>
+          <div className="frase">
+            "Hay dos formas de escribir programas sin errores; sólo la tercera funciona"
+          </div>
+        </div>
+        
+      </div>
+
+      <h2 id="sobre-mi">Sobre Mi</h2>
+      <div className="aboutMe">
+
+        <p className="aboutMe-text">Hola, me presento, tengo 20 años, me gusta la programación y estoy en búsqueda de adquirir más conocimiento. Me considero una persona curiosa, resolutiva y con ganas de mejorar todos los días en el desarrollo web y programación. Paso la mayor tiempo de mi vida con el codigo. Mis hobbies son el gimnasio y escuchar musica.
+        Un desarrollador de software profesional no duda en eliminar lo que sea necesario siempre que vaya a ser sustituido por una idea mejor que añada simplicidad, mejor diseño o mayor legibilidad a la solución. 
+        </p>
+
+        <div className="rating">
+          <div>
+            <span component="legend">Frontend</span>
+            <Rating name="read-only" value={5} readOnly />
+          </div>
+          <div>
+            <span component="legend">Backend</span>
+            <Rating name="read-only" value={2} readOnly />
+          </div>
+          <div>
+            <span component="legend">Trabajo en Equipo</span>
+            <Rating name="read-only" value={4} readOnly />
+          </div>
+          <div>
+            <span component="legend">Experiencia</span>
+            <Rating name="read-only" value={2} readOnly />
+          </div>
+        </div>
+      </div>
+
+      <h2 id="Tecnologias">Tecnologias</h2>
       <div className="mainTecnologia">
         <div className="tecnologia">
           <figure><img src="img/github.png" alt="github"/></figure>

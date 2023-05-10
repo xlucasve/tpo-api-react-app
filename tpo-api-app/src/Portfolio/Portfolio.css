@@ -1,5 +1,77 @@
-h2 {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
+    height: 45vh;
+}
+
+.ft-perfil {
+    width: 200px;
+}
+
+.ft-perfil img {
+    border-radius: 20px;
+}
+
+.introduction-data {
+    width: 360px;
+}
+
+/* DEMO-SPECIFIC STYLES */
+
+.typewriter, .bt-download {
+    margin-bottom: 0.5rem !important;
+}
+
+.typewriter h1 {
+    color: #000000;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    width: 350px;
+    font-size: 20px;
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+.frase {
+    font-style: oblique;
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    border-bottom: 3px solid black;
+}
+
+#sobre-mi {
+    width: 120px;
+}
+
+#Tecnologias {
+    width: 150px;
 }
 
 
@@ -17,12 +89,59 @@ h2 {
     height: 65vh;
 }
 
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 52.5vh;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.aboutMe-text {
+    margin: 0 auto;
+    width: 300px;
+}
+
 figure {
     width: 100px;
 }
 
 
-@media only screen and (min-width: 700px) {
+@media (min-width: 760px) {
+
+    .introduction {
+        flex-direction: row;
+    }
+
+    .ft-perfil {
+        width: 250px;
+    }
+
+    .typewriter h1 {
+        font-size: 21px;
+        width: 370px;
+    }
+
+    .aboutMe {
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        height: 30vh;
+        align-items: center;
+    }
+    
+    .aboutMe-text {
+        margin: 0;
+        width: 430px;
+    }
+    
 
     .tecnologia  {
         width: 599px;
@@ -35,6 +154,26 @@ figure {
 
   }
 
-  
+  @media (min-width: 1024px) {
+
+    .ft-perfil {
+        width: 320px;
+    }
+
+    .introduction-data {
+        width: 500px;
+    }
+
+    .typewriter h1 {
+        font-size: 27.5px;
+        width: 482px;
+    }
+
+    .aboutMe-text {
+        margin: 0;
+        width: 560px;
+    }
+
+  }
 
   
