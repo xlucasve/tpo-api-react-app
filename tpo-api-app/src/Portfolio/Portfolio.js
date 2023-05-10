@@ -34,6 +34,7 @@ const Portfolio = () => {
           </ThemeProvider>
           <div className="frase">
             "Hay dos formas de escribir programas sin errores; sólo la tercera funciona"
+            <p>Quilmes, Buenos Aires</p>
           </div>
         </div>
         
@@ -62,6 +63,10 @@ const Portfolio = () => {
           <div>
             <span component="legend">Experiencia</span>
             <Rating name="read-only" value={2} readOnly />
+          </div>
+          <div>
+            <span component="legend">Ingles</span>
+            <Rating name="read-only" value={3} readOnly />
           </div>
         </div>
       </div>
