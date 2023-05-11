@@ -18,25 +18,25 @@ const SobreMi = () => {
       </p>
 
       <div className="rating">
-        <div>
+        <div className="elemento-rating">
           <span component="legend" className="texto-estrella">
             Frontend
           </span>
           <Rating name="read-only" value={5} readOnly className="estrella" />
         </div>
-        <div>
+        <div className="elemento-rating">
           <span component="legend">Backend</span>
           <Rating name="read-only" value={2} readOnly />
         </div>
-        <div>
+        <div className="elemento-rating">
           <span component="legend">Trabajo en Equipo</span>
           <Rating name="read-only" value={4} readOnly />
         </div>
-        <div>
+        <div className="elemento-rating">
           <span component="legend">Experiencia</span>
           <Rating name="read-only" value={2} readOnly />
         </div>
-        <div>
+        <div className="elemento-rating">
           <span component="legend">Ingles</span>
           <Rating name="read-only" value={3} readOnly />
         </div>
