@@ -1,51 +1,14 @@
 import React from "react";
 import "./Portfolio.css";
-import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
-import Typography from "@mui/material/Typography";
-import ListadoCertificados from "./components/ListadoCertificados";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#db2b39",
-    },
-  },
-});
+import ListadoCertificados from "./components/Certificado/ListadoCertificados";
+import Introduccion from "./components/Introduccion/Introduccion";
 
 const Portfolio = () => {
   return (
     <div>
-      <h1>Introduccion</h1>
-
-      <div className="introduction">
-        <figure className="ft-perfil">
-          <img src="img/foto.jpg" alt="github" />
-        </figure>
-
-        <div className="introduction-data">
-          <div className="typewriter">
-            <h1>I'm Juan Ignacio Mendieta</h1>
-          </div>
-          <ThemeProvider theme={theme}>
-            <a
-              href="img/Juan Ignacio Mendieta.pdf"
-              download="Curriculum Juan Ignacio Mendieta"
-            >
-              <Button variant="outlined" className="bt-download">
-                Descargar CV
-              </Button>
-            </a>
-          </ThemeProvider>
-          <div className="frase">
-            "Hay dos formas de escribir programas sin errores; sólo la tercera
-            funciona"
-            <p>Quilmes, Buenos Aires</p>
-          </div>
-        </div>
-      </div>
-
+      <Introduccion />
       <h2 id="sobre-mi">Sobre Mi</h2>
       <div className="aboutMe">
         <p className="aboutMe-text">

@@ -2,7 +2,7 @@ import React from "react";
 
 import Certificado from "./Certificado";
 
-import Foto from "../../image/icono-certificado.png";
+import Foto from "../../../image/icono-certificado.png";
 
 import "./ListadoCertificado.css";
 
