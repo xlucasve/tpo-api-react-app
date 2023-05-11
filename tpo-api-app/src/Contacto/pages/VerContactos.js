@@ -1,6 +1,8 @@
 import React from "react";
 import ItemContacto from "../components/ItemContacto";
 
+import "./VerContacto.css";
+
 const contactoTest = [
   {
     id: "1",
@@ -38,8 +40,7 @@ const VerContactos = () => {
   return (
     <div>
       <h1>Contactos Recibidos</h1>
-      <div>
-        <span></span>
+      <div className="elemento-contacto">
         {contactoTest.map((contacto) => {
           return (
             <ItemContacto

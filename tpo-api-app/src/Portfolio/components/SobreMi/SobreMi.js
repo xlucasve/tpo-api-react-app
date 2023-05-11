@@ -19,8 +19,10 @@ const SobreMi = () => {
 
       <div className="rating">
         <div>
-          <span component="legend">Frontend</span>
-          <Rating name="read-only" value={5} readOnly />
+          <span component="legend" className="texto-estrella">
+            Frontend
+          </span>
+          <Rating name="read-only" value={5} readOnly className="estrella" />
         </div>
         <div>
           <span component="legend">Backend</span>
