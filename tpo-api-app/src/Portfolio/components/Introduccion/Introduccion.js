@@ -15,33 +15,29 @@ const theme = createTheme({
 
 const Introduccion = () => {
   return (
-    <div>
-      <h1>Introduccion</h1>
+    <div className="introduction">
+      <figure className="ft-perfil">
+        <img src="img/foto.jpg" alt="github" />
+      </figure>
 
-      <div className="introduction">
-        <figure className="ft-perfil">
-          <img src="img/foto.jpg" alt="github" />
-        </figure>
-
-        <div className="introduction-data">
-          <div className="typewriter">
-            <h1>I'm Juan Ignacio Mendieta</h1>
-          </div>
-          <ThemeProvider theme={theme}>
-            <a
-              href="img/Juan Ignacio Mendieta.pdf"
-              download="Curriculum Juan Ignacio Mendieta"
-            >
-              <Button variant="outlined" className="bt-download">
-                Descargar CV
-              </Button>
-            </a>
-          </ThemeProvider>
-          <div className="frase">
-            "Hay dos formas de escribir programas sin errores; sólo la tercera
-            funciona"
-            <p>Quilmes, Buenos Aires</p>
-          </div>
+      <div className="introduction-data">
+        <div className="typewriter">
+          <h1>I'm Juan Ignacio Mendieta</h1>
+        </div>
+        <ThemeProvider theme={theme}>
+          <a
+            href="img/Juan Ignacio Mendieta.pdf"
+            download="Curriculum Juan Ignacio Mendieta"
+          >
+            <Button variant="outlined" className="bt-download">
+              Descargar CV
+            </Button>
+          </a>
+        </ThemeProvider>
+        <div className="frase">
+          "Hay dos formas de escribir programas sin errores; sólo la tercera
+          funciona"
+          <p>Quilmes, Buenos Aires</p>
         </div>
       </div>
     </div>

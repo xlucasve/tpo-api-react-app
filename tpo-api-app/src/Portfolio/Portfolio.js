@@ -1,13 +1,15 @@
 import React from "react";
 import "./Portfolio.css";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import ListadoCertificados from "./components/Certificado/ListadoCertificados";
 import Introduccion from "./components/Introduccion/Introduccion";
 
+import Tecnologia from "./components/Tecnologia/Tecnologia";
+
 const Portfolio = () => {
   return (
     <div>
+      <h1>Introduccion</h1>
       <Introduccion />
       <h2 id="sobre-mi">Sobre Mi</h2>
       <div className="aboutMe">
@@ -45,34 +47,8 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-
       <h2 id="Tecnologias">Tecnologias</h2>
-      <div className="mainTecnologia">
-        <div className="tecnologia">
-          <figure>
-            <img src="img/github.png" alt="github" />
-          </figure>
-          <figure>
-            <img src="img/html.png" alt="html" />
-          </figure>
-          <figure>
-            <img src="img/Javascript.png" alt="Javascript" />
-          </figure>
-          <figure>
-            <img src="img/mysql.png" alt="mysql" />
-          </figure>
-          <figure>
-            <img src="img/nodejs.png" alt="nodejs" />
-          </figure>
-          <figure>
-            <img src="img/react.png" alt="react" />
-          </figure>
-          <figure>
-            <img src="img/sequelize.png" alt="sequelize" />
-          </figure>
-        </div>
-      </div>
-
+      <Tecnologia />
       <h2 id="Certificados">Certificados</h2>
       <ListadoCertificados />
     </div>
