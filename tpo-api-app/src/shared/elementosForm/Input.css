@@ -23,6 +23,11 @@
   border-radius: 4px;
 }
 
+.form-control label:after {
+  content: " *";
+  color: red;
+}
+
 .form-control textarea {
   resize: none;
   height: 100%;

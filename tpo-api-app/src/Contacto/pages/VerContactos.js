@@ -38,20 +38,23 @@ const VerContactos = () => {
   return (
     <div>
       <h1>Contactos Recibidos</h1>
-      {contactoTest.map((contacto) => {
-        return (
-          <ItemContacto
-            key={contacto.id}
-            nombreEmpresa={contacto.nombreEmpresa}
-            nombreReclutador={contacto.nombreReclutador}
-            correoReclutador={contacto.correoReclutador}
-            telefonoReclutador={contacto.telefonoReclutador}
-            tituloPuesto={contacto.tituloPuesto}
-            descripcionPuesto={contacto.descripcionPuesto}
-            montoOfrecido={contacto.montoOfrecido}
-          />
-        );
-      })}
+      <div>
+        <span></span>
+        {contactoTest.map((contacto) => {
+          return (
+            <ItemContacto
+              key={contacto.id}
+              nombreEmpresa={contacto.nombreEmpresa}
+              nombreReclutador={contacto.nombreReclutador}
+              correoReclutador={contacto.correoReclutador}
+              telefonoReclutador={contacto.telefonoReclutador}
+              tituloPuesto={contacto.tituloPuesto}
+              descripcionPuesto={contacto.descripcionPuesto}
+              montoOfrecido={contacto.montoOfrecido}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

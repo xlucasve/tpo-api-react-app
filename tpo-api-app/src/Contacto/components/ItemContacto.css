@@ -1,23 +1,33 @@
 .item-contacto {
   display: flex;
-  padding: 0 25% 0 40%;
+  width: 500px;
+  margin-top: 15px;
+  margin-left: 33%;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: black;
+  border-radius: 5px;
 }
 
 .titulo {
   margin-top: 1rem;
   font-size: larger;
+  text-align: center;
+  align-items: center;
 }
 
 .texto {
+  margin-left: 8px;
   font: arial;
   font-size: large;
+  align-items: flex-start;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 840px) {
   .item-contacto {
-    padding: 0 25% 0 30%;
+    margin-left: 12%;
+    width: 450px;
   }
 }
