@@ -2,13 +2,13 @@ import React from "react";
 
 import Certificado from "./Certificado";
 
-import Foto from "../../image/gorro-escolar.png";
+import Foto from "../../image/icono-certificado.png";
 
 import "./ListadoCertificado.css";
 
 const ListadoCertificados = () => {
   return (
-    <div className="certificado-curso">
+    <div className="certificado">
       <Certificado
         foto={Foto}
         alt="Icono Certificado"

@@ -110,7 +110,7 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <h2 id="Certificados-Cursos">Certificados y Cursos</h2>
+      <h2 id="Certificados">Certificados</h2>
       <ListadoCertificados />
     </div>
   );
