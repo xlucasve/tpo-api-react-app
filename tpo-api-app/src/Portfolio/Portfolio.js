@@ -20,11 +20,14 @@ const Portfolio = () => {
       <Tecnologia />
       <h2 id="Certificados">Certificados</h2>
       <ListadoCertificados />
-      <Link to="/contacto" className="link-centrado">
-        <Button variant="outlined" className="bt-contacto">
-          Contactame
-        </Button>
-      </Link>
+      <div className="contacto-centrado">
+        <h2 id="Contactame">Ponte en Contacto</h2>
+        <Link to="/contacto" className="link-centrado">
+          <Button variant="outlined" className="bt-contacto">
+            Contactame
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

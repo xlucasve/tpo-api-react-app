@@ -23,14 +23,39 @@ h2 {
   padding-top: 15px;
 }
 
+#Contactame {
+  font-size: 30px;
+  width: 250px;
+  margin-top: 3rem;
+}
+
+.contacto-centrado {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bt-contacto {
   display: flex;
-  margin-top: 1rem !important;
+  margin-top: 1.3rem !important;
   align-items: center;
 }
 
 .link-centrado {
   width: fit-content;
   justify-content: center;
-  margin-left: 43%;
+  margin-left: 20px;
+}
+
+@media (max-width="590px") {
+  #Contactame {
+    margin-left: 1%;
+  }
+
+  .link-centrado {
+    width: fit-content;
+    justify-content: center;
+    margin-left: 33%;
+  }
 }
