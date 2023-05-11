@@ -1,0 +1,29 @@
+.certificado-curso-individual {
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+}
+
+.nombre-curso {
+  font-size: 24px;
+  padding-top: 1vh;
+}
+
+.descripcion-curso {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.foto-curso {
+  width: 50px;
+  height: 55px;
+  align-self: flex-end;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1040px) {
+  .certificado-curso-individual {
+    padding-top: 1vh;
+  }
+}

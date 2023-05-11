@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
-import foto from "../image/gorro-escolar.png";
+import ListadoCertificados from "./components/ListadoCertificados";
 
 const theme = createTheme({
   palette: {
@@ -110,37 +110,8 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {/* <h2 id="Certificados-Cursos">Certificados y Cursos</h2>
-      <div className="certificado-curso">
-        <div className="certificado-curso-individual">
-          <img src={foto} alt="gorro-escolar" className="foto-curso" />
-          <div>
-            <p className="nombre-curso">Titulo de Ingles</p>
-            <p className="descripcion-curso">EF SET</p>
-          </div>
-        </div>
-        <div className="certificado-curso-individual">
-          <img src={foto} alt="gorro-escolar" className="foto-curso" />
-          <div>
-            <p className="nombre-curso">Java Spring with MongoDB</p>
-            <p className="descripcion-curso">Curso Udemy</p>
-          </div>
-        </div>
-        <div className="certificado-curso-individual">
-          <img src={foto} alt="gorro-escolar" className="foto-curso" />
-          <div>
-            <p className="nombre-curso">Java Spring with SQL</p>
-            <p className="descripcion-curso">Curso Udemy</p>
-          </div>
-        </div>
-        <div className="certificado-curso-individual">
-          <img src={foto} alt="gorro-escolar" className="foto-curso" />
-          <div>
-            <p className="nombre-curso">React with NodeJs</p>
-            <p className="descripcion-curso">Curso Udemy</p>
-          </div>
-        </div>
-      </div> */}
+      <h2 id="Certificados-Cursos">Certificados y Cursos</h2>
+      <ListadoCertificados />
     </div>
   );
 };
