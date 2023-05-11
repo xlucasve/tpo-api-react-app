@@ -1,179 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 .introduction {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 45vh;
 }
 
 .ft-perfil {
-    width: 200px;
+  width: 200px;
 }
 
 .ft-perfil img {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .introduction-data {
-    width: 360px;
+  width: 360px;
 }
 
 /* DEMO-SPECIFIC STYLES */
 
-.typewriter, .bt-download {
-    margin-bottom: 0.5rem !important;
+.typewriter,
+.bt-download {
+  margin-bottom: 0.5rem !important;
 }
 
 .typewriter h1 {
-    color: #000000;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    width: 350px;
-    font-size: 20px;
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-  }
+  color: #000000;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  width: 350px;
+  font-size: 20px;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 
 .frase {
-    font-style: oblique;
+  font-style: oblique;
 }
 
 h2 {
-    margin-top: 1rem;
-    margin-left: 3rem;
-    border-bottom: 3px solid black;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  border-bottom: 3px solid black;
 }
 
 #sobre-mi {
-    width: 120px;
+  width: 120px;
 }
 
 #Tecnologias {
-    width: 150px;
+  width: 150px;
 }
 
+#Certificados-Cursos {
+  width: 240px;
+}
+
+.certificado-curso {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 1vh;
+}
+
+.certificado-curso-individual {
+  display: flex;
+  flex-direction: row;
+}
+
+.nombre-curso {
+  font-size: 30px;
+  padding-top: 1vh;
+}
+
+.descripcion-curso {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.foto-curso {
+  width: 60px;
+  height: 60px;
+  align-self: flex-end;
+  padding-right: 10px;
+}
 
 .mainTecnologia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tecnologia {
-    display: flex;
-    justify-content: space-around;
-    width: 280px;
-    flex-wrap: wrap;
-    height: 65vh;
+  display: flex;
+  justify-content: space-around;
+  width: 280px;
+  flex-wrap: wrap;
+  height: 65vh;
 }
 
 .aboutMe {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    height: 60.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 60.5vh;
 }
 
 .rating {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .aboutMe-text {
-    margin: 0 auto;
-    width: 300px;
+  margin: 0 auto;
+  width: 300px;
 }
 
 figure {
-    width: 100px;
+  width: 100px;
 }
 
-
 @media (min-width: 760px) {
-
-    .introduction {
-        flex-direction: row;
-    }
-
-    .ft-perfil {
-        width: 250px;
-    }
-
-    .typewriter h1 {
-        font-size: 21px;
-        width: 370px;
-    }
-
-    .aboutMe {
-        flex-direction: row;
-        justify-content: space-evenly;
-        text-align: center;
-        height: 30vh;
-        align-items: center;
-    }
-    
-    .aboutMe-text {
-        margin: 0;
-        width: 430px;
-    }
-    
-
-    .tecnologia  {
-        width: 599px;
-        height: 40vh;
-    }
-    
-    figure {
-        width: 120px;
-    }
-
+  .introduction {
+    flex-direction: row;
   }
 
-  @media (min-width: 1024px) {
-
-    .ft-perfil {
-        width: 320px;
-    }
-
-    .introduction-data {
-        width: 500px;
-    }
-
-    .typewriter h1 {
-        font-size: 27.5px;
-        width: 482px;
-    }
-
-    .aboutMe-text {
-        margin: 0;
-        width: 560px;
-    }
-
+  .ft-perfil {
+    width: 250px;
   }
 
-  
+  .typewriter h1 {
+    font-size: 21px;
+    width: 370px;
+  }
+
+  .aboutMe {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 30vh;
+    align-items: center;
+  }
+
+  .aboutMe-text {
+    margin: 0;
+    width: 430px;
+  }
+
+  .tecnologia {
+    width: 599px;
+    height: 40vh;
+  }
+
+  figure {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ft-perfil {
+    width: 320px;
+  }
+
+  .introduction-data {
+    width: 500px;
+  }
+
+  .typewriter h1 {
+    font-size: 27.5px;
+    width: 482px;
+  }
+
+  .aboutMe-text {
+    margin: 0;
+    width: 560px;
+  }
+}
+
+/* @media (max-width: 1040px) {
+  .certificado-curso {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 30%;
+  }
+
+  .certificado-curso-individual {
+    padding-top: 1vh;
+  }
+} */
