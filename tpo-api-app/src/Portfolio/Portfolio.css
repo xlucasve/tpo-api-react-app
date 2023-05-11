@@ -25,10 +25,9 @@ h2 {
   margin-left: 3rem;
 }
 
-h2 #Contactame {
-  font-size: 30px;
-  width: 250px;
-  margin-top: 3rem;
+#Contactame {
+  font-size: 40px;
+  width: 320px;
 }
 
 .contacto-centrado {
@@ -37,6 +36,8 @@ h2 #Contactame {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .bt-contacto {
