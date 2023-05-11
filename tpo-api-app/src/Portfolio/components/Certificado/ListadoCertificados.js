@@ -12,7 +12,7 @@ const ListadoCertificados = () => {
       <Certificado
         foto={Foto}
         alt="Icono Certificado"
-        nombre="Titulo Ingles"
+        nombre="Cambridg English"
         descripcion="Nivel Avanzado"
         fecha="2024"
       />

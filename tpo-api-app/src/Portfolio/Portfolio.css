@@ -10,17 +10,29 @@ h2 {
 }
 
 #sobre-mi {
-  width: 160px;
+  width: 110px;
   margin-left: 3rem;
 }
 
 #Tecnologias {
-  width: 160px;
+  width: 140px;
   margin-left: 3rem;
 }
 
 #Certificados {
-  width: 160px;
+  width: 140px;
+  padding-top: 15px;
+  margin-left: 3rem;
+}
+
+#Educacion {
+  width: 120px;
+  padding-top: 15px;
+  margin-left: 3rem;
+}
+
+#Experiencia {
+  width: 215px;
   padding-top: 15px;
   margin-left: 3rem;
 }

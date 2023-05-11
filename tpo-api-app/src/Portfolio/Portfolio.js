@@ -3,6 +3,8 @@ import ListadoCertificados from "./components/Certificado/ListadoCertificados";
 import Introduccion from "./components/Introduccion/Introduccion";
 import SobreMi from "./components/SobreMi/SobreMi";
 import Tecnologia from "./components/Tecnologia/Tecnologia";
+import Educacion from "./components/Educacion/Educacion";
+import Experiencia from "./components/Experiencia/Experiencia";
 
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -20,6 +22,10 @@ const Portfolio = () => {
       <Tecnologia />
       <h2 id="Certificados">Certificados</h2>
       <ListadoCertificados />
+      <h2 id="Educacion">Educacion</h2>
+      <Educacion />
+      <h2 id="Experiencia">Experiencia Laboral</h2>
+      <Experiencia />
       <div className="contacto-centrado">
         <h2 id="Contactame">Ponte en Contacto</h2>
         <Link to="/contacto" className="link-centrado">

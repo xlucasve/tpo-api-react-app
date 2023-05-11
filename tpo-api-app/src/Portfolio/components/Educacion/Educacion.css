@@ -1,0 +1,27 @@
+.elemento-educacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+}
+
+.titulo-educacion {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.institucion {
+  font-size: 18px;
+}
+
+.fecha {
+  font-size: 18px;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .elemento-educacion {
+    margin-left: 3rem;
+  }
+}
