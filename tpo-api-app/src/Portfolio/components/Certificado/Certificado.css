@@ -11,9 +11,11 @@
   border-style: solid;
   border-width: 1.5px;
   border-radius: 4px;
+  background-color: white;
 }
 
 .nombre-certificado {
+  color: sienna;
   font-size: 24px;
   padding-top: 1vh;
 }

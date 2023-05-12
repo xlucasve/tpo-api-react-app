@@ -38,6 +38,13 @@
   }
 }
 
+@media (max-width: 760px) {
+  .elemento-rating {
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 1024px) {
   .aboutMe-text {
     margin: 0;
