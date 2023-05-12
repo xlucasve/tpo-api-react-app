@@ -12,10 +12,10 @@ const Footer = () => {
         </div>
         <p className="ft1-p2">Todos los derechos reservados.</p>
         <div>
-          <a href="https://www.linkedin.com/in/juan-ignacio-mendieta/">
+          <a className="icon" href="https://www.linkedin.com/in/juan-ignacio-mendieta/">
             <AiFillLinkedin />
           </a>
-          <a href="https://github.com/JuanxIG">
+          <a className="icon" href="https://github.com/JuanxIG">
             <AiFillGithub />
           </a>
         </div>

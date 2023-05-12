@@ -30,7 +30,20 @@ const Login = () => {
         />
         <TextField
           id="outlined-basic"
+          className="nombreEmpresa"
+          label="Confirmar Email"
+          variant="outlined"
+          name="email"
+        />
+        <TextField
+          id="outlined-basic"
           label="Contraseña"
+          variant="outlined"
+          type="Password"
+        />
+        <TextField
+          id="outlined-basic"
+          label="Confirmar Contraseña"
           variant="outlined"
           type="Password"
         />
