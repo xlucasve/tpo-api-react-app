@@ -11,17 +11,21 @@ footer {
   margin-top: 1rem;
   color: #320b0c;
   align-items: center;
+  background-color: #320b0c;
 }
 
 footer p {
+  color: #c2c1c2;
   margin: 0;
 }
 
 .ft1-p1 {
+  color: #c2c1c2;
   font-size: 14px;
 }
 
 .ft1-p2 {
+  color: #c2c1c2;
   font-size: 12px;
 }
 
@@ -30,11 +34,10 @@ footer p {
 }
 
 .ft-img figure {
-  width: 80px;
+  width: 95px;
   margin: 0 auto;
 }
 
-
 .icon {
-  color: darkred;
+  color: cornflowerblue;
 }
