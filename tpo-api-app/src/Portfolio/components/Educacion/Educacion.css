@@ -1,6 +1,6 @@
 .elemento-educacion {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   margin-top: 1.5rem;
 }
@@ -10,11 +10,18 @@
   font-weight: bold;
 }
 
-.institucion {
+.institucion-educacion {
   font-size: 18px;
 }
 
-.fecha {
+.fecha-educacion {
   font-size: 18px;
   font-style: italic;
+}
+
+.foto-educacion {
+  width: 100px;
+  height: 70px;
+  align-self: flex-start;
+  padding-right: 5px;
 }
