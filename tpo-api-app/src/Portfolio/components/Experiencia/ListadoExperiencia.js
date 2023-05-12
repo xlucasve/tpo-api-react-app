@@ -12,14 +12,7 @@ const ListadoExperiencia = () => {
         <Experiencia
           foto={FotoGenerica}
           titulo="Full Stack Developer"
-          tiempo="2 Año"
-          empresa="Freelance (Self Employed)"
-          duracion="2021 - Actualidad"
-          ubicacion="Quilmes, Buenos Aires - Remoto"
-        />
-        <Experiencia
-          foto={FotoGenerica}
-          titulo="Full Stack Developer"
+          tiempo="2 Años"
           empresa="Freelance (Self Employed)"
           duracion="2021 - Actualidad"
           ubicacion="Quilmes, Buenos Aires - Remoto"
