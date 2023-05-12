@@ -11,7 +11,7 @@ const ListadoEducacion = () => {
       <Educacion
         titulo="Licenciatura en Gestión de Tecnología de la Información"
         institucion="UADE (Universidad Argentina de la Empresa)"
-        fecha="2021 - Actualidad (2024)"
+        fecha="2021 - Actualidad (2023)"
         foto={LogoUade}
       />
     </div>

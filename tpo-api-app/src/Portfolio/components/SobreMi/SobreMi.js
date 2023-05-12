@@ -8,10 +8,10 @@ const SobreMi = () => {
     <div className="aboutMe">
       <p className="aboutMe-text">
         Hola, me presento, tengo 20 años, me gusta la programación y estoy en
-        búsqueda de adquirir más conocimiento. Me considero una persona curiosa,
+        búsqueda de adquirir más conocimiento. Me considero una persona creativa,
         resolutiva y con ganas de mejorar todos los días en el desarrollo web y
         programación. Paso la mayor tiempo de mi vida con el codigo. Mis hobbies
-        son el gimnasio y escuchar musica. Un desarrollador de software
+        son el gimnasio y escuchar musica. Soy un desarrollador de software
         profesional no duda en eliminar lo que sea necesario siempre que vaya a
         ser sustituido por una idea mejor que añada simplicidad, mejor diseño o
         mayor legibilidad a la solución.

@@ -14,28 +14,21 @@ const ListadoCertificados = () => {
         alt="Icono Certificado"
         nombre="Cambridg English"
         descripcion="Nivel Avanzado"
-        fecha="2024"
+        fecha="2020"
       />
       <Certificado
         foto={Foto}
         alt="Icono Certificado"
-        nombre="Java Spring with SQL"
-        descripcion="Curso Udemy"
+        nombre="Getting Started with Docker"
+        descripcion="Curso SkillUp by SimpliLearn"
         fecha="2023"
       />
       <Certificado
         foto={Foto}
         alt="Icono Certificado"
-        nombre="Java Spring with MongoDB"
-        descripcion="Curso Udemy"
-        fecha="2023"
-      />
-      <Certificado
-        foto={Foto}
-        alt="Icono Certificado"
-        nombre="React and NodeJS with MongoDB"
-        descripcion="Curso Udemy"
-        fecha="2023"
+        nombre="Programacion Web Full Stack"
+        descripcion="Curso Digital House"
+        fecha="2021"
       />
     </div>
   );

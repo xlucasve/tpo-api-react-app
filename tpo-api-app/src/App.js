@@ -6,6 +6,7 @@ import Login from "./Login/Login";
 import Portfolio from "./Portfolio/Portfolio";
 import Contacto from "./Contacto/pages/Contacto";
 import VerContactos from "./Contacto/pages/VerContactos";
+import Register from "./Register/Register";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contactos" element={<VerContactos />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
