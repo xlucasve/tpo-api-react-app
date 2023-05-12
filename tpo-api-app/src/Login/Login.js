@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <div className="divLogin" onSubmit={loginSubmitHandler}>
       <h1>Iniciar Sesion</h1>
-      <form>
+      <form className="login-form">
         <TextField
           id="outlined-basic"
           className="nombreEmpresa"
