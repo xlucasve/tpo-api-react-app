@@ -1,13 +1,13 @@
 import React from "react";
 
-import Input from "../../shared/elementosForm/Input";
-import Button from "../../shared/elementosForm/Button";
+import Input from "../../../shared/elementosForm/Input";
+import Button from "../../../shared/elementosForm/Button";
 import {
   VALIDATOR_REQUIRE,
   VALIDATOR_MINLENGTH,
   VALIDATOR_EMAIL,
-} from "../../shared/util/validators";
-import { useForm } from "../../shared/hooks/form-hook";
+} from "../../../shared/util/validators";
+import { useForm } from "../../../shared/hooks/form-hook";
 import "./ContactoForm.css";
 
 const ContactoForm = () => {

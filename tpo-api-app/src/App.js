@@ -2,11 +2,11 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "./shared/mainNavegacion/MainHeader";
 import Footer from "./shared/mainNavegacion/Footer";
-import Login from "./Login/Login";
-import Portfolio from "./Portfolio/Portfolio";
-import Contacto from "./Contacto/pages/Contacto";
-import VerContactos from "./Contacto/pages/VerContactos";
-import Register from "./Register/Register";
+import Login from "./componentes-all/Login/Login";
+import Portfolio from "./componentes-all/Portfolio/Portfolio";
+import Contacto from "./componentes-all/Contacto/pages/Contacto";
+import VerContactos from "./componentes-all/Contacto/pages/VerContactos";
+import Register from "./componentes-all/Register/Register";
 
 import "./App.css";
 
