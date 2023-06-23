@@ -3,16 +3,13 @@ const express = require("express");
 const router = express.Router();
 
 const contactoController = require("../controllers/contacto-controller");
-const usuarioController = require("../controllers/usuario-controller");
 
-router.get("/contacto/", contactoController.getContactos);
+router.get("/", contactoController.getContactos);
 
-router.get("/contacto/:cid", contactoController.getContactosById);
+router.get("/:cid", contactoController.getContactosById);
 
-router.post("/contacto", contactoController.createContacto);
+router.post("/", contactoController.createContacto);
 
-router.delete("/contacto/:cid", contactoController.deleteContacto);
-
-router.post("/usuario/signup", usuarioController.signup);
+router.delete("/:cid", contactoController.deleteContacto);
 
 module.exports = router;

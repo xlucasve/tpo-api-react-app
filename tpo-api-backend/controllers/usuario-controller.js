@@ -1,5 +1,6 @@
 const HttpError = require("../models/http-error");
 const { validationResult } = require("express-validator");
+const bcrypt = require("bcryptjs");
 
 const Usuario = require("../models/Usuario");
 
@@ -27,9 +28,16 @@ const signup = async (req, res, next) => {
     return next(error);
   }
 
+  let hashedPassword;
+  try {
+    hashedPassword = await bcrypt.hash(password, 12);
+  } catch (err) {
+    const error = new HttpError("Error al registrarse", 500);
+    return next(error);
+  }
   const usuarioCreado = new Usuario({
     email,
-    password,
+    password: hashedPassword,
   });
 
   try {
@@ -42,4 +50,40 @@ const signup = async (req, res, next) => {
   res.status(201).json({ usuario: usuarioCreado.toObject({ getters: true }) });
 };
 
+const login = async (req, res, next) => {
+  const { email, password } = req.body;
+
+  let usuarioBuscado;
+
+  try {
+    usuarioBuscado = await Usuario.findOne({ email: email });
+  } catch (err) {
+    const error = new HttpError("Usuario Inexistente", 500);
+    return next(erorr);
+  }
+
+  if (!usuarioBuscado) {
+    const error = new HttpError("Credenciales Invalidas", 401);
+    return next(error);
+  }
+
+  let esPasswordValida = false;
+
+  try {
+    esPasswordValida = await bcrypt.compare(password, usuarioBuscado.password);
+  } catch (err) {
+    console.log("error");
+    const error = new HttpError("Error al loguearse", 500);
+    return next(error);
+  }
+
+  if (!esPasswordValida) {
+    const error = new HttpError("Credenciales Invalidas", 401);
+    return next(error);
+  }
+
+  res.json({ message: "Logueado Exitosamente" });
+};
+
 exports.signup = signup;
+exports.login = login;

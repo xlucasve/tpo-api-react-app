@@ -1,8 +1,20 @@
 const HttpError = require("../models/http-error");
 const Contacto = require("../models/Contacto");
 
-const getContactos = (req, res, next) => {
-  console.log("Obtenidos todos los contactos");
+const getContactos = async (req, res, next) => {
+  let contactos;
+  try {
+    contactos = await Contacto.find();
+  } catch (err) {
+    const error = new HttpError("Error al buscar usuarios", 500);
+    return next(error);
+  }
+
+  res.json({
+    contactos: contactos.map((contacto) =>
+      contacto.toObject({ getters: true })
+    ),
+  });
 };
 
 const getContactosById = async (req, res, next) => {
