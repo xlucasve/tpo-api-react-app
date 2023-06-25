@@ -23,6 +23,12 @@
   font: arial;
   font-size: large;
   align-items: flex-start;
+  font-weight: bold;
+}
+
+.texto-item {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 @media only screen and (max-width: 840px) {

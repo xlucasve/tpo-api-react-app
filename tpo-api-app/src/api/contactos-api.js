@@ -14,7 +14,6 @@ const getContactos = async (setContactos, token) => {
   );
   let responseData = await response.json();
   setContactos(responseData.contactos);
-  console.log(responseData);
 };
 
 export default getContactos;

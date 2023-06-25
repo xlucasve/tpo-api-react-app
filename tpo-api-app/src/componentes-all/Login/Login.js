@@ -16,8 +16,9 @@ import "./Login.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
   const [logueado, setLogueado] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -32,19 +33,24 @@ const Login = () => {
 
     let response = await loginApi(email, password);
     console.log(response);
-    console.log("Guardo el token en sessionStorage");
 
-    if (response.token) {
+    if (response.status == 200) {
+      console.log("Guardo el token en sessionStorage");
       setLogueado(true);
+      console.log(logueado);
       sessionStorage.setItem("token", response.token);
+      console.log(response.message);
+    } else {
+      console.log(response.message);
     }
   };
 
   return (
     <div>
-      <h2>Login</h2>
+      {logueado ? navigate("/") : null}
       <form onSubmit={handleSubmit}>
-        {logueado ? navigate("/") : null}
+        <h2>Login</h2>
+
         <div>
           <label>Email:</label>
           <input

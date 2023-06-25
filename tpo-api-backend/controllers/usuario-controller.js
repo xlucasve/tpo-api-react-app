@@ -18,15 +18,11 @@ const signup = async (req, res, next) => {
   try {
     usuarioExistente = await Usuario.findOne({ email: email });
   } catch (err) {
-    console.log("erro4r");
-
     const error = new HttpError("Error al registrarse", 500);
     return next(error);
   }
 
   if (usuarioExistente) {
-    console.log("error3");
-
     const error = new HttpError(
       "Un usuario con este correo ya existe, pruebe a loguearse",
       422
@@ -38,8 +34,6 @@ const signup = async (req, res, next) => {
   try {
     hashedPassword = await bcrypt.hash(password, 12);
   } catch (err) {
-    console.log(err);
-
     const error = new HttpError("Error al registrarse", 500);
     return next(error);
   }
@@ -52,7 +46,6 @@ const signup = async (req, res, next) => {
   try {
     await usuarioCreado.save();
   } catch (err) {
-    console.log("error");
     const error = new HttpError("Error al crear usuario", 500);
     return next(error);
   }
@@ -65,7 +58,6 @@ const signup = async (req, res, next) => {
       { expiresIn: "1d" }
     );
   } catch (err) {
-    console.log("erro5r");
     const error = new HttpError("Error al registrarse", 500);
     return next(error);
   }
@@ -99,7 +91,6 @@ const login = async (req, res, next) => {
   try {
     esPasswordValida = await bcrypt.compare(password, usuarioBuscado.password);
   } catch (err) {
-    console.log("error");
     const error = new HttpError("Error al loguearse", 500);
     return next(error);
   }
@@ -117,12 +108,9 @@ const login = async (req, res, next) => {
       { expiresIn: "1d" }
     );
   } catch (err) {
-    console.log(err);
     const error = new HttpError("Error al loguearse, problema de JWT", 500);
     return next(error);
   }
-
-  console.log("usuario logueado exitosamente");
 
   res.json({
     usuarioId: usuarioBuscado.id,

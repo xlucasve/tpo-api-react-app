@@ -2,7 +2,6 @@ const HttpError = require("../models/http-error");
 const Contacto = require("../models/Contacto");
 
 const getContactos = async (req, res, next) => {
-  console.log("obteniendo contactos");
   let contactos;
   try {
     contactos = await Contacto.find();
