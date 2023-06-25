@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const validateJwt = async (req, res = response, next) => {
   try {
-    const jwtValidate = jwt.verify(req.headers.jwt, process.env.PRIVATE_KEY);
+    const jwtValidate = jwt.verify(req.headers.jwt, process.env.JWT_SECRET);
     if (jwtValidate) {
       console.log("Verificado correctamente el JWT");
       next();

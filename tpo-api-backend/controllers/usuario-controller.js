@@ -122,6 +122,8 @@ const login = async (req, res, next) => {
     return next(error);
   }
 
+  console.log("usuario logueado exitosamente");
+
   res.json({
     usuarioId: usuarioBuscado.id,
     usuarioEmail: usuarioBuscado.email,

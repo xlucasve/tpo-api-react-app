@@ -1,47 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ItemContacto from "../components/ItemContacto";
+import getContactos from "../../../api/contactos-api";
 
 import "./VerContacto.css";
 
-const contactoTest = [
-  {
-    id: "1",
-    nombreEmpresa: "NombreEmpresa1",
-    nombreReclutador: "NombreReclutador1",
-    correoReclutador: "CorreoReclutador1",
-    telefonoReclutador: "1123456",
-    tituloPuesto: "TituloPuesto1",
-    descripcionPuesto: "Esta es la descripcion de la Descripcion Puesto 1",
-    montoOfrecido: "MontoOFrecido1",
-  },
-  {
-    id: "2",
-    nombreEmpresa: "NombreEmpresa2",
-    nombreReclutador: "NombreReclutador2",
-    correoReclutador: "CorreoReclutador2",
-    telefonoReclutador: "2123456",
-    tituloPuesto: "TituloPuesto2",
-    descripcionPuesto: "Esta es la descripcion de la Descripcion Puesto 2",
-    montoOfrecido: "MontoOFrecido2",
-  },
-  {
-    id: "3",
-    nombreEmpresa: "NombreEmpresa3",
-    nombreReclutador: "NombreReclutador3",
-    correoReclutador: "CorreoReclutador3",
-    telefonoReclutador: "3123456",
-    tituloPuesto: "TituloPuesto3",
-    descripcionPuesto: "Esta es la descripcion de la Descripcion Puesto 3",
-    montoOfrecido: "MontoOFrecido3",
-  },
-];
-
 const VerContactos = () => {
+  const [contactos, setContactos] = useState([]);
+  const accessToken =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NDk2MTlhMWY4MmZiZDE4ZWRjOTQ3MmIiLCJ1c3VhcmlvRW1haWwiOiJwZnN1ZWI1NWFTQUxUQG1haWwuY29tIiwiaWF0IjoxNjg3NTU5MjMwLCJleHAiOjE2ODc2NDU2MzB9.j7YibhrN3XFkiv6BZxYa51B7u2VJE2ZupvXc2qX_V20";
+
+  useEffect(() => {
+    console.log("Pido los contactos");
+    getContactos(setContactos, accessToken);
+  }, [setContactos, accessToken]);
+
   return (
     <div>
       <h1>Contactos Recibidos</h1>
       <div className="elemento-contacto">
-        {contactoTest.map((contacto) => {
+        {contactos.map((contacto) => {
           return (
             <ItemContacto
               key={contacto.id}
