@@ -5,7 +5,7 @@ const router = express.Router();
 
 const contactoController = require("../controllers/contacto-controller");
 
-router.get("/", contactoController.getContactos);
+router.get("/", jtwValidator, contactoController.getContactos);
 
 router.get("/:cid", contactoController.getContactosById);
 

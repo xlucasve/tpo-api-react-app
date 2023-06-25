@@ -1,5 +1,13 @@
 import React, { useState } from "react";
+import Input from "../../shared/elementosForm/Input";
+import Button from "../../shared/elementosForm/Button";
+import {
+  VALIDATOR_EMAIL,
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_REQUIRE,
+} from "../../shared/util/validators";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "../../shared/hooks/form-hook";
 
 import loginApi from "../../api/login-api";
 
@@ -28,14 +36,14 @@ const Login = () => {
 
     if (response.token) {
       setLogueado(true);
-      sessionStorage.setItem("access-token", response.token);
+      sessionStorage.setItem("token", response.token);
     }
   };
 
   return (
     <div>
       <h2>Login</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         {logueado ? navigate("/") : null}
         <div>
           <label>Email:</label>

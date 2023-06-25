@@ -8,10 +8,13 @@ const getContactos = async (setContactos, token) => {
     redirect: "follow",
   };
 
-  let response = await fetch("localhost:5000/api/contacto/", requestOptions);
-  let jsonData = await response.json();
-  setContactos(jsonData);
-  console.log(jsonData);
+  let response = await fetch(
+    "http://localhost:5000/api/contacto/",
+    requestOptions
+  );
+  let responseData = await response.json();
+  setContactos(responseData.contactos);
+  console.log(responseData);
 };
 
 export default getContactos;

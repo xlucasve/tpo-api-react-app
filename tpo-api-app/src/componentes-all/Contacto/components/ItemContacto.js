@@ -3,6 +3,7 @@ import React from "react";
 import "./ItemContacto.css";
 
 const ItemContacto = (props) => {
+  console.log(props.nombreEmpresa);
   return (
     <div className="item-contacto">
       <h1 className="titulo">{props.nombreEmpresa}</h1>
