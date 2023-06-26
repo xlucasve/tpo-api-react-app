@@ -1,0 +1,192 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "Swagger Integración de Aplicaciones 2021"
+host: localhost:5000
+basePath: "/api"
+schemes:
+  - http
+paths:
+  /usuario/signup:
+    post:
+      summary: Registrar nuevo usuario
+      tags:
+        - Usuario
+      description: Registra un nuevo usuario con su correo y contraseña
+      operationId: registerUser
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: UsuarioRegister
+          description: Objeto de usuario a usar
+          required: true
+          schema:
+            $ref: "#/definitions/Usuario"
+      responses:
+        "201":
+          description: Usuario creado exitosamente
+        "422":
+          description: Inputs invalidos / Usuario ya existente
+        "500":
+          description: Error al crear usuario
+  /usuario/login:
+    post:
+      tags:
+        - Usuario
+      summary: Loguear usuario
+      description: Loguea al usuario si el email y contraseña son correctos
+      operationId: loguinUser
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: UsuarioLogin
+          description: Objeto de usuario a usar
+          required: true
+          schema:
+            $ref: "#/definitions/Usuario"
+      responses:
+        "200":
+          description: Se logueo al usuario exitosamente
+        "401":
+          description: Credenciales invalidas
+        "500":
+          description: Error al loguearse
+  /contacto:
+    get:
+      tags:
+        - Contacto
+      summary: Obtener todos los contactos
+      description: Al realizar el llamado se devuelve un array de todos los contactos existentes
+      operationId: obtenerContactos
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Se obtuvieron los contactos exitosamente
+        "401":
+          description: Unauthorized
+        "404":
+          description: No se pudo encontrar ningun contacto
+        "500":
+          description: Error al buscar el contacto
+  /contacto/:cid:
+    get:
+      tags:
+        - Contacto
+      summary: Obtener un contacto especifico
+      description: Devuelve el contacto acorde con el parametro enviado
+      operationId: obtenerContactoPorId
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Se obtuvieron los contactos exitosamente
+        "401":
+          description: Unauthorized
+        "404":
+          description: No se pudo encontrar ningun contacto
+        "500":
+          description: Error al buscar el contacto
+  /contacto/post:
+    post:
+      tags:
+        - Contacto
+      summary: Crear Contacto
+      description: Crea un contacto y lo sube a la base de datos
+      operationId: crearContacto
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: ContactoCrear
+          description: Objeto de Contacto a crear
+          required: true
+          schema:
+            $ref: "#/definitions/Contacto"
+      responses:
+        "201":
+          description: Contacto creado exitosamente
+        "401":
+          description: Unauthorized
+        "500":
+          description: Error al crear el contacto
+  /contacto/:id:
+    delete:
+      tags:
+        - Contacto
+      summary: Borrar Contacto
+      description: Elimina un contacto
+      operationId: borrarContacto
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Contacto eliminado exitosamente
+        "401":
+          description: Unauthorized
+        "500":
+          description: Error al eliminar el contacto
+
+securityDefinitions:
+  jwt:
+    type: apiKey
+    name: jwt
+    in: header
+definitions:
+  Usuario:
+    type: object
+    properties:
+      email:
+        type: string
+        description: Direccion de correo de usuario
+        example: test@test.com
+      password:
+        type: string
+        description: Contraseña del usuario
+        example: test
+  Contacto:
+    type: object
+    properties:
+      nombreEmpresa:
+        type: string
+        description: Nombre de la empresa del reclutador
+        example: NombreEmpresaTest
+      nombreReclutador:
+        type: string
+        description: Nombre del reclutador que envia la oferta
+        example: NombreReclutadorTest
+      correoReclutador:
+        type: string
+        description: Direccion de correo para contactarse
+        example: Correo@Correo.mail
+      telefonoReclutador:
+        type: string
+        description: Numero de telefono para contactarse
+        example: TelefonoReclutador123456Test
+      tituloPuesto:
+        type: string
+        description: Titulo del puesto ofrecido
+        example: TituloPuestoTest
+      descripcionPuesto:
+        type: string
+        description: Descripcion del puesto ofrecido
+        example: DescripcionPuestoTest
+      montoOfrecido:
+        type: string
+        description: Monto que se ofrece
+        example: MontoOFrecido123Test
