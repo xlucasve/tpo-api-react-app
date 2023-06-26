@@ -9,8 +9,13 @@ import {
 } from "../../../shared/util/validators";
 import { useForm } from "../../../shared/hooks/form-hook";
 import "./ContactoForm.css";
+import { useNavigate } from "react-router-dom";
+
+import crearContacto from "../../../api/crear-contacto-api";
 
 const ContactoForm = () => {
+  const navigate = useNavigate();
+
   const [formState, inputHandler] = useForm(
     {
       nombreEmpresa: {
@@ -45,9 +50,12 @@ const ContactoForm = () => {
     false
   );
 
-  const contactoSubmitHandler = (event) => {
+  const accessToken = sessionStorage.token;
+
+  const contactoSubmitHandler = async (event) => {
     event.preventDefault();
-    console.log(formState.inputs); // por ahora logueamos el objeto, despues lo enviamos al backend para la base de datos
+    await crearContacto(formState, accessToken);
+    navigate("/");
   };
 
   return (

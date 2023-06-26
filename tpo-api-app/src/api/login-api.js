@@ -19,9 +19,14 @@ const login = async (email, password) => {
     "http://localhost:5000/api/usuario/login",
     requestOptions
   );
-  let jsonData = await response.json();
-
-  return jsonData;
+  if (response.status === 200) {
+    let jsonData = await response.json();
+    console.log("Se obtuvo el jsonData correctamente: " + jsonData.token);
+    return jsonData;
+  } else {
+    console.log(response.message);
+  }
+  return response;
 };
 
 export default login;

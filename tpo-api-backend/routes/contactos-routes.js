@@ -14,6 +14,8 @@ const router = express.Router();
  *      responses:
  *        '200':
  *          description: Se obtuvieron los contactos exitosamente
+ *        '401':
+ *          description: JWT incorrecto
  *        '500':
  *          description: Error al buscar los contactos
  */
@@ -29,12 +31,14 @@ router.get("/", jtwValidator, contactoController.getContactos);
  *      responses:
  *        '200':
  *          description: Se obtuvo el contacto exitosamente
+ *        '401':
+ *          description: JWT incorrecto
  *        '404':
  *          description: No se pudo encontrar el contacto buscado
  *        '500':
  *          description: Error al buscar el contacto
  */
-router.get("/:cid", contactoController.getContactosById);
+router.get("/:cid", jtwValidator, contactoController.getContactosById);
 
 /**
  * @swagger
@@ -46,6 +50,8 @@ router.get("/:cid", contactoController.getContactosById);
  *      responses:
  *        '201':
  *          description: Se creo el contacto exitosamente
+ *        '401':
+ *          description: JWT incorrecto
  *        '500':
  *          description: Error al crear el contacto
  *    parameters:
@@ -107,7 +113,7 @@ router.get("/:cid", contactoController.getContactosById);
  *          example: 180 000 pesos
  */
 
-router.post("/post", contactoController.createContacto);
+router.post("/post", jtwValidator, contactoController.createContacto);
 
 /**
  * @swagger
@@ -128,10 +134,12 @@ router.post("/post", contactoController.createContacto);
  *      responses:
  *        '200':
  *          description: Se elimino el contacto exitosamente
+ *        '401':
+ *          description: JWT incorrecto
  *        '500':
  *          description: Error al eliminar el contacto
  */
 
-router.delete("/:cid", contactoController.deleteContacto);
+router.delete("/:cid", jtwValidator, contactoController.deleteContacto);
 
 module.exports = router;

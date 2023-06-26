@@ -5,8 +5,7 @@ import ListaContactos from "../components/ListaContactos";
 
 const VerContactos = () => {
   const [contactosObtenidos, setContactosObtenidos] = useState([{}]);
-  const accessToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOiI2NDk2MTlhMWY4MmZiZDE4ZWRjOTQ3MmIiLCJ1c3VhcmlvRW1haWwiOiJwZnN1ZWI1NWFTQUxUQG1haWwuY29tIiwiaWF0IjoxNjg3NzE3OTg2LCJleHAiOjE2ODc4MDQzODZ9.CecJINkm7a5cNbQibkmRAX9hnBzsvqkEXgzSCU75pkU";
+  const accessToken = sessionStorage.token;
   useEffect(() => {
     getContactos(setContactosObtenidos, accessToken);
   }, [setContactosObtenidos, accessToken]);

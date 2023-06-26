@@ -6,8 +6,8 @@ import {
   VALIDATOR_MINLENGTH,
   VALIDATOR_REQUIRE,
 } from "../../shared/util/validators";
-import { useNavigate } from "react-router-dom";
 import { useForm } from "../../shared/hooks/form-hook";
+import { useNavigate } from "react-router-dom";
 
 import loginApi from "../../api/login-api";
 
@@ -31,17 +31,16 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let response = await loginApi(email, password);
-    console.log(response);
+    let jsonResponse = await loginApi(email, password);
 
-    if (response.status == 200) {
+    if (jsonResponse.token) {
       console.log("Guardo el token en sessionStorage");
       setLogueado(true);
       console.log(logueado);
-      sessionStorage.setItem("token", response.token);
-      console.log(response.message);
+      sessionStorage.setItem("token", jsonResponse.token);
+      navigate("/");
     } else {
-      console.log(response.message);
+      alert("Credenciales invalidas");
     }
   };
 
