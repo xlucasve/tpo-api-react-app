@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const { swaggerDocs } = require("./swagger");
 
 const contactosRoutes = require("./routes/contactos-routes");
 const usuarioRoutes = require("./routes/usuarios-routes");
@@ -28,11 +29,6 @@ app.use((req, res, next) => {
 app.use("/api/contacto", contactosRoutes);
 app.use("/api/usuario", usuarioRoutes);
 
-app.use((req, res, next) => {
-  const error = new HttpError("Ruta desconocida", 404);
-  throw error;
-});
-
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);
@@ -41,4 +37,7 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "Ha ocurrido un error desconocido" });
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, () => {
+  swaggerDocs(app, process.env.PORT);
+  console.log("Funciona el servidor correctamente");
+});
