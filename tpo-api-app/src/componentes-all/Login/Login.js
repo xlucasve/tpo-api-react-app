@@ -47,11 +47,11 @@ const Login = () => {
   return (
     <div>
       {logueado ? navigate("/") : null}
-      <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h1>Login</h1>
 
-        <div>
-          <label>Email:</label>
+        <div className="divLogin">
+          <label>Email</label>
           <input
             type="email"
             value={email}
@@ -59,7 +59,7 @@ const Login = () => {
             required
           />
         </div>
-        <div>
+        <div className="divLogin">
           <label>Password:</label>
           <input
             type="password"
@@ -68,7 +68,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" onClick={handleSubmit}>
+        <button className="loginButton" type="submit" onClick={handleSubmit}>
           Login
         </button>
       </form>

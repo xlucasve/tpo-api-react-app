@@ -142,11 +142,12 @@ paths:
         "500":
           description: Error al eliminar el contacto
 
-securityDefinitions:
-  jwt:
-    type: apiKey
-    name: jwt
-    in: header
+components:
+  securitySchemes:
+    bearerAuth:
+      type: "http"
+      scheme: "bearer"
+      bearerFormat: "JWT"
 definitions:
   Usuario:
     type: object

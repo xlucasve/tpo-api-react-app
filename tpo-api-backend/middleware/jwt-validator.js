@@ -6,7 +6,6 @@ const validateJwt = async (req, res = response, next) => {
   try {
     const jwtValidate = jwt.verify(req.headers.jwt, process.env.JWT_SECRET);
     if (jwtValidate) {
-      console.log("Verificado correctamente el JWT");
       next();
     } else {
       return res.status(401).json({
