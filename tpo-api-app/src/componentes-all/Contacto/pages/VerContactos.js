@@ -12,7 +12,6 @@ const VerContactos = () => {
 
   return (
     <div>
-      <h1>Contactos Recibidos</h1>
       <ListaContactos contactos={contactosObtenidos} />
     </div>
   );

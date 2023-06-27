@@ -1,10 +1,10 @@
-const login = async (email, password) => {
+const login = async (formState) => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   var raw = JSON.stringify({
-    email: email,
-    password: password,
+    email: formState.inputs.email.value,
+    password: formState.inputs.password.value,
   });
 
   var requestOptions = {

@@ -1,88 +1,114 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "../../shared/hooks/form-hook";
+import Input from "../../shared/elementosForm/Input";
+import Button from "../../shared/elementosForm/Button";
+import {
+  VALIDATOR_EMAIL,
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_REQUIRE,
+} from "../../shared/util/validators";
 
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import registerApi from "../../api/register-api";
+
 import "./Register.css";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [confirmarEmail, setConfirmarEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmarPassword, setConfirmarPassword] = useState("");
+const Register = () => {
   const navigate = useNavigate();
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  const [logueado, setLogueado] = useState(false);
+  const [formState, inputHandler] = useForm(
+    {
+      email: {
+        value: "",
+        isValid: false,
+      },
+      confirmarEmail: {
+        value: "",
+        isValid: false,
+      },
+      password: {
+        value: "",
+        isValid: false,
+      },
+      confirmarPassword: {
+        value: "",
+        isValid: false,
+      },
+    },
+    false
+  );
 
-  const handleConfirmarEmailChange = (e) => {
-    setConfirmarEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmarPasswordChange = (e) => {
-    setConfirmarPassword(e.target.value);
-  };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (
+      formState.inputs.email.value === formState.inputs.confirmarEmail.value &&
+      formState.inputs.password.value ===
+        formState.inputs.confirmarPassword.value
+    ) {
+      try {
+        let jsonResponse = await registerApi(formState);
+        if (jsonResponse.token) {
+          console.log("Registrado exitosamente");
+          sessionStorage.setItem("token", jsonResponse.token);
+          navigate("/");
+        } else {
+          alert("a");
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      alert("Email o contraseña no iguales");
+    }
   };
 
   return (
     <div>
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h1>Register</h1>
-        <div className="divLogin">
-          <label>Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="miCorreo@email.com"
-            required
-          />
-        </div>
-        <div className="divLogin">
-          <label>Confirmar Email</label>
-          <input
-            type="email"
-            value={confirmarEmail}
-            onChange={handleConfirmarEmailChange}
-            placeholder="miCorreo@email.com"
-            required
-          />
-        </div>
-        <div className="divLogin">
-          <label>Contraseña</label>
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            placeholder="Contraseña123!"
-            required
-          />
-        </div>
-        <div className="divLogin">
-          <label>Confirmar Contraseña</label>
-          <input
-            type="password"
-            value={confirmarPassword}
-            onChange={handleConfirmarPasswordChange}
-            placeholder="Contraseña123!"
-            required
-          />
-        </div>
-        <button className="loginButton" type="submit" onClick={handleSubmit}>
-          Login
-        </button>
+      <form className="contacto-form" onSubmit={handleSubmit}>
+        <Input
+          id="email"
+          element="input"
+          type="text"
+          label="Email"
+          validators={[VALIDATOR_EMAIL()]}
+          errorText="Ingrese su correo"
+          onInput={inputHandler}
+        />
+        <Input
+          id="confirmarEmail"
+          element="input"
+          type="text"
+          label="Email"
+          validators={[VALIDATOR_EMAIL()]}
+          errorText="Ingrese su correo"
+          onInput={inputHandler}
+        />
+        <Input
+          id="password"
+          element="input"
+          type="password"
+          label="Contraseña"
+          validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(3)]}
+          errorText="Ingrese su contraseña, minimo 3 caracteres"
+          onInput={inputHandler}
+        />
+        <Input
+          id="confirmarPassword"
+          element="input"
+          type="password"
+          label="Contraseña"
+          validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(3)]}
+          errorText="Ingrese su contraseña, minimo 3 caracteres"
+          onInput={inputHandler}
+        />
+        <Button type="submit" disabled={!formState.isValid}>
+          ENVIAR
+        </Button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Register;

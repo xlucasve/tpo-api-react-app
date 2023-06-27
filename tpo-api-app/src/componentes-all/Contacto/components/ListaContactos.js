@@ -5,15 +5,16 @@ import ItemContacto from "./ItemContacto";
 import "./VerContacto.css";
 
 const ListaContactos = (props) => {
-  if (!props) {
+  if (!sessionStorage.token) {
     return (
       <div>
-        <h2>No hay contactos</h2>
+        <h1>No esta autorizado</h1>
       </div>
     );
   } else {
     return (
       <div className="elemento-contacto">
+        <h1>Contactos recibidos</h1>
         {props.contactos.map((contacto) => {
           return (
             <ItemContacto

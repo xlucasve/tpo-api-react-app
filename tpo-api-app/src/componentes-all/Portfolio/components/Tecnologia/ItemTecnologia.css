@@ -1,0 +1,19 @@
+.div-tecnologia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 130px;
+  height: 150px;
+  padding-bottom: 20px;
+}
+
+.imagen-tecnologia {
+  width: 130px;
+  height: 120px;
+}
+
+.texto-tecnologia {
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto;
+}

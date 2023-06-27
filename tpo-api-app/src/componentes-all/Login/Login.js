@@ -14,27 +14,29 @@ import loginApi from "../../api/login-api";
 import "./Login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [logueado, setLogueado] = useState(false);
+  const [formState, inputHandler] = useForm(
+    {
+      email: {
+        value: "",
+        isValid: false,
+      },
+      password: {
+        value: "",
+        isValid: false,
+      },
+    },
+    false
+  );
 
   const navigate = useNavigate();
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let jsonResponse = await loginApi(email, password);
+    let jsonResponse = await loginApi(formState);
 
     if (jsonResponse.token) {
-      console.log("Guardo el token en sessionStorage");
       setLogueado(true);
       console.log(logueado);
       sessionStorage.setItem("token", jsonResponse.token);
@@ -47,30 +49,28 @@ const Login = () => {
   return (
     <div>
       {logueado ? navigate("/") : null}
-      <form className="login-form" onSubmit={handleSubmit}>
-        <h1>Login</h1>
-
-        <div className="divLogin">
-          <label>Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
-        </div>
-        <div className="divLogin">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-        </div>
-        <button className="loginButton" type="submit" onClick={handleSubmit}>
-          Login
-        </button>
+      <form className="contacto-form" onSubmit={handleSubmit}>
+        <Input
+          id="email"
+          element="input"
+          type="text"
+          label="Email"
+          validators={[VALIDATOR_EMAIL()]}
+          errorText="Ingrese su correo"
+          onInput={inputHandler}
+        />
+        <Input
+          id="password"
+          element="input"
+          type="text"
+          label="Contraseña"
+          validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(3)]}
+          errorText="Ingrese su contraseña, minimo 3 caracteres"
+          onInput={inputHandler}
+        />
+        <Button type="submit" disabled={!formState.isValid}>
+          ENVIAR
+        </Button>
       </form>
     </div>
   );

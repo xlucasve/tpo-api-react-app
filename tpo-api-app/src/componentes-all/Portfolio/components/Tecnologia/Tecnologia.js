@@ -1,4 +1,5 @@
 import React from "react";
+import ItemTecnologia from "./ItemTecnologia";
 
 import "./Tecnologia.css";
 
@@ -6,27 +7,24 @@ const Tecnologia = () => {
   return (
     <div className="mainTecnologia">
       <div className="tecnologia">
-        <figure>
-          <img src="img/github.png" alt="github" />
-        </figure>
-        <figure>
-          <img src="img/html.png" alt="html" />
-        </figure>
-        <figure>
-          <img src="img/Javascript.png" alt="Javascript" />
-        </figure>
-        <figure>
-          <img src="img/mysql.png" alt="mysql" />
-        </figure>
-        <figure>
-          <img src="img/nodejs.png" alt="nodejs" />
-        </figure>
-        <figure>
-          <img src="img/react.png" alt="react" />
-        </figure>
-        <figure>
-          <img src="img/sequelize.png" alt="sequelize" />
-        </figure>
+        <ItemTecnologia imagen="img/html.png" alt="html" texto="Avanzado" />
+        <ItemTecnologia
+          imagen="img/Javascript.png"
+          alt="javascript"
+          texto="Intermedio"
+        />
+        <ItemTecnologia imagen="img/mysql.png" alt="mySQL" texto="Basico" />
+        <ItemTecnologia
+          imagen="img/nodejs.png"
+          alt="nodejs"
+          texto="Intermedio"
+        />
+        <ItemTecnologia imagen="img/react.png" alt="react" texto="Intermedio" />
+        <ItemTecnologia
+          imagen="img/sequelize.png"
+          alt="sequelize"
+          texto="Basico"
+        />
       </div>
     </div>
   );
