@@ -63,7 +63,7 @@ const Login = () => {
         <Input
           id="password"
           element="input"
-          type="text"
+          type="password"
           label="Contraseña"
           validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(3)]}
           errorText="Ingrese su contraseña, minimo 3 caracteres"
