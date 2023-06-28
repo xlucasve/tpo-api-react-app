@@ -83,7 +83,7 @@ const Register = () => {
           id="confirmarEmail"
           element="input"
           type="text"
-          label="Email"
+          label="Confirmar Email"
           validators={[VALIDATOR_EMAIL()]}
           errorText="Ingrese su correo"
           onInput={inputHandler}
@@ -101,7 +101,7 @@ const Register = () => {
           id="confirmarPassword"
           element="input"
           type="password"
-          label="Contraseña"
+          label="Confirmar Contraseña"
           validators={[VALIDATOR_REQUIRE(), VALIDATOR_MINLENGTH(3)]}
           errorText="Ingrese su contraseña, minimo 3 caracteres"
           onInput={inputHandler}
