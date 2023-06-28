@@ -17,3 +17,19 @@
   font-style: italic;
   margin: 0 auto;
 }
+
+.texto-tecnologia {
+  font-size: 1.2rem;
+  background-image: linear-gradient(#db2b39, #db2b39);
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+   transition: background-size .7s, background-position .5s ease-in-out;
+
+}
+
+.texto-tecnologia:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}

@@ -16,6 +16,13 @@ const SobreMi = () => {
         necesario siempre que vaya a ser sustituido por una idea mejor que añada
         simplicidad, mejor diseño o mayor legibilidad a la solución.
       </p>
+      <div className="container">
+        <div className="text-box">
+          <h1 className="aboutMe-h1">PROGRAMADOR JR.</h1>
+          <h1 className="aboutMe-h1">PROGRAMADOR JR.</h1>
+        </div>
+          <p className="aboutMe-p">Frontend<span>:)</span></p>
+      </div>
     </div>
   );
 };
