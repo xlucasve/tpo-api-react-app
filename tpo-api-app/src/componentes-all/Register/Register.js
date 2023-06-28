@@ -52,6 +52,8 @@ const Register = () => {
         if (jsonResponse.token) {
           console.log("Registrado exitosamente");
           sessionStorage.setItem("token", jsonResponse.token);
+          sessionStorage.setItem("logueado", true);
+          window.location.reload(false);
           navigate("/");
         } else {
           alert("a");
@@ -66,6 +68,7 @@ const Register = () => {
 
   return (
     <div>
+      {sessionStorage.logueado ? navigate("/") : null}
       <form className="contacto-form" onSubmit={handleSubmit}>
         <Input
           id="email"

@@ -37,9 +37,10 @@ const Login = () => {
     let jsonResponse = await loginApi(formState);
 
     if (jsonResponse.token) {
-      setLogueado(true);
-      console.log(logueado);
+      sessionStorage.setItem("logueado", true);
+      console.log(sessionStorage.logueado);
       sessionStorage.setItem("token", jsonResponse.token);
+      window.location.reload(false);
       navigate("/");
     } else {
       alert("Credenciales invalidas");
@@ -48,7 +49,7 @@ const Login = () => {
 
   return (
     <div>
-      {logueado ? navigate("/") : null}
+      {sessionStorage.logueado ? navigate("/") : null}
       <form className="contacto-form" onSubmit={handleSubmit}>
         <Input
           id="email"
