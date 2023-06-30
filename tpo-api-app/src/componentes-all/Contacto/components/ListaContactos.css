@@ -5,8 +5,7 @@
   flex-direction: column;
 }
 
-
-.verContactos {
+.noAutorizado {
   height: 77vh;
   display: flex;
   flex-direction: column;

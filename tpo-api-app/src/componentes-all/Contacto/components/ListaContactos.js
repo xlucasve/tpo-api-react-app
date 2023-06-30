@@ -2,12 +2,12 @@ import React from "react";
 
 import ItemContacto from "./ItemContacto";
 
-import "./VerContacto.css";
+import "./ListaContactos.css";
 
 const ListaContactos = (props) => {
   if (!sessionStorage.token) {
     return (
-      <div className="verContactos">
+      <div className="noAutorizado">
         <h1>No esta autorizado</h1>
       </div>
     );

@@ -50,6 +50,7 @@ const Login = () => {
   return (
     <div className="divLogin">
       {sessionStorage.logueado ? navigate("/") : null}
+      <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <Input
           id="email"

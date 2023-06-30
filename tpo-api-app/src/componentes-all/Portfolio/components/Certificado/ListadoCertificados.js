@@ -30,6 +30,13 @@ const ListadoCertificados = () => {
         descripcion="Curso Digital House"
         fecha="2021"
       />
+      <Certificado
+        foto={Foto}
+        alt="Icono Certificado"
+        nombre="Desarrollo Sitios Web"
+        descripcion="Curso Educativo"
+        fecha="2021"
+      />
     </div>
   );
 };

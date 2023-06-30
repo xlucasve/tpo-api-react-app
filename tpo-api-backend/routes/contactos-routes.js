@@ -8,7 +8,7 @@ router.get("/", jtwValidator, contactoController.getContactos);
 
 router.get("/:cid", jtwValidator, contactoController.getContactosById);
 
-router.post("/post", jtwValidator, contactoController.createContacto);
+router.post("/post", contactoController.createContacto);
 
 router.delete("/:cid", jtwValidator, contactoController.deleteContacto);
 

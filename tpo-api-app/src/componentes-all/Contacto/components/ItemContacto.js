@@ -23,6 +23,10 @@ const ItemContacto = (props) => {
         <span className="texto-item">{props.tituloPuesto}</span>
       </div>
       <div>
+        <span className="texto">Mensaje: </span>
+        <span className="texto-item">{props.descripcionPuesto}</span>
+      </div>
+      <div>
         <span className="texto">Monto: </span>
         <span className="texto-item">{props.montoOfrecido}</span>
       </div>

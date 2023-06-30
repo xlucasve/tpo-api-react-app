@@ -107,7 +107,7 @@ const ContactoForm = () => {
       <Input
         id="descripcionPuesto"
         element="textarea"
-        label="Descripcion del puesto"
+        label="Mensaje"
         validators={[VALIDATOR_MINLENGTH(10)]}
         errorText="Ingrese por lo menos 10 caracteres"
         onInput={inputHandler}

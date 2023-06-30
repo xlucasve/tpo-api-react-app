@@ -21,7 +21,9 @@ const SobreMi = () => {
           <h1 className="aboutMe-h1">PROGRAMADOR JR.</h1>
           <h1 className="aboutMe-h1">PROGRAMADOR JR.</h1>
         </div>
-          <p className="aboutMe-p">Frontend<span>:)</span></p>
+        <p className="aboutMe-p">
+          Frontend<span>:)</span>
+        </p>
       </div>
     </div>
   );

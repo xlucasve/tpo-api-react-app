@@ -9,10 +9,10 @@
 
 :root {
   --mainColor: #320b0c;
-  --mainColorLight: #C2C1C2;
-  --secondaryColor: #4E0504;
-  --textColor: #0F0F0F;
-  --thirdColor: #2D2E2E;
+  --mainColorLight: #c2c1c2;
+  --secondaryColor: #4e0504;
+  --textColor: #0f0f0f;
+  --thirdColor: #2d2e2e;
 }
 
 header {

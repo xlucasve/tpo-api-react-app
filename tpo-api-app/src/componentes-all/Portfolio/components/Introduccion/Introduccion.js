@@ -21,7 +21,7 @@ const Introduccion = () => {
 
       <div className="introduction-data">
         <div className="typewriter">
-          <h1>I'm Juan Ignacio Mendieta</h1>
+          <h1>Juan Ignacio Mendieta</h1>
         </div>
         <ThemeProvider theme={theme}>
           <a

@@ -3,8 +3,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "./MainHeader.css";
 import { Link } from "react-router-dom";
 import Button from "../elementosForm/Button";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
   const navRef = useRef();
 
   const showNavbar = () => {
@@ -13,7 +15,8 @@ function Navbar() {
 
   const unLogin = () => {
     sessionStorage.clear("logueado");
-    console.log("Deslogueado");
+    navigate("/");
+    window.location.reload(false);
   };
 
   if (!sessionStorage.logueado) {
@@ -42,8 +45,10 @@ function Navbar() {
         {/* Centrar el texto de los botones */}
         <nav ref={navRef}>
           <Link to="/">Portfolio</Link>
-          <Link to="/contacto">Contacto</Link>
           <Link to="/contactos">Recibidos</Link>
+          <Button type="submit" onClick={unLogin}>
+            LOG OUT
+          </Button>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
