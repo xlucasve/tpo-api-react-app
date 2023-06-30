@@ -46,9 +46,7 @@ function Navbar() {
         <nav ref={navRef}>
           <Link to="/">Portfolio</Link>
           <Link to="/contactos">Recibidos</Link>
-          <Button type="submit" onClick={unLogin}>
-            LOG OUT
-          </Button>
+          <button onClick={unLogin}>LOG OUT</button> {/*Boton de Log out*/}
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
