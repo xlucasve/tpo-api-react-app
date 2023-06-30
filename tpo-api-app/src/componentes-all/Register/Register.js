@@ -67,9 +67,9 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="divLogin">
       {sessionStorage.logueado ? navigate("/") : null}
-      <form className="contacto-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <Input
           id="email"
           element="input"
