@@ -7,7 +7,7 @@ import "./VerContacto.css";
 const ListaContactos = (props) => {
   if (!sessionStorage.token) {
     return (
-      <div>
+      <div className="verContactos">
         <h1>No esta autorizado</h1>
       </div>
     );

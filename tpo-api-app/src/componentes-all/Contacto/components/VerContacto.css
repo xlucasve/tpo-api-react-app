@@ -4,3 +4,11 @@
   align-items: center;
   flex-direction: column;
 }
+
+
+.verContactos {
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
