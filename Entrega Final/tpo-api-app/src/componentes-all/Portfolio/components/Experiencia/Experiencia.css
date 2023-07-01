@@ -1,0 +1,32 @@
+.elemento-experiencia {
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+}
+
+.logo-empresa {
+  width: 40px;
+  height: 65px;
+  align-self: flex-start;
+  padding-right: 7px;
+  padding-top: 14px;
+}
+
+.titulo-experiencia {
+  color: darkred;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.empresa-experiencia {
+  font-size: 22px;
+}
+
+.duracion-experiencia {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.ubicacion-experiencia {
+  font-size: 16px;
+}

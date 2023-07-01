@@ -1,0 +1,38 @@
+.item-contacto {
+  display: flex;
+  width: 500px;
+  margin-top: 15px;
+
+  flex-direction: column;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.titulo {
+  margin-top: 1rem;
+  font-size: larger;
+  text-align: center;
+  align-items: center;
+}
+
+.texto {
+  margin-left: 8px;
+  font: arial;
+  font-size: large;
+  align-items: flex-start;
+  font-weight: bold;
+}
+
+.texto-item {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 840px) {
+  .item-contacto {
+    width: 450px;
+  }
+}

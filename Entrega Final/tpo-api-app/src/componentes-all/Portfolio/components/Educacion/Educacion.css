@@ -1,0 +1,27 @@
+.elemento-educacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.titulo-educacion {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.institucion-educacion {
+  font-size: 18px;
+}
+
+.fecha-educacion {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.foto-educacion {
+  width: 100px;
+  height: 70px;
+  align-self: flex-start;
+  padding-right: 5px;
+}

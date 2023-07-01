@@ -1,0 +1,13 @@
+.elemento-contacto {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.noAutorizado {
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

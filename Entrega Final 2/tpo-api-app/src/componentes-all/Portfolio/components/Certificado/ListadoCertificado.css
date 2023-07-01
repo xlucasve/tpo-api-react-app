@@ -1,0 +1,26 @@
+.certificado {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 1vh;
+}
+
+@media (max-width: 1040px) {
+  .certificado {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 590px) {
+  .certificado {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
