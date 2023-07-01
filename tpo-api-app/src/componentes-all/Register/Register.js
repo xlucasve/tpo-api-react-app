@@ -53,7 +53,6 @@ const Register = () => {
           console.log("Registrado exitosamente");
           sessionStorage.setItem("token", jsonResponse.token);
           sessionStorage.setItem("logueado", true);
-          window.location.reload(false);
           navigate("/");
         } else {
           alert("a");

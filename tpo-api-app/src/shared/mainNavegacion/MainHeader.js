@@ -15,8 +15,6 @@ function Navbar() {
 
   const unLogin = () => {
     sessionStorage.clear("logueado");
-    navigate("/");
-    window.location.reload(false);
   };
 
   if (!sessionStorage.logueado) {
@@ -46,7 +44,9 @@ function Navbar() {
         <nav ref={navRef}>
           <Link to="/">Portfolio</Link>
           <Link to="/contactos">Recibidos</Link>
-          <button onClick={unLogin}>LOG OUT</button> {/*Boton de Log out*/}
+          <Link onClick={unLogin} to="/">
+            LOG OUT
+          </Link>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>

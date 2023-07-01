@@ -40,7 +40,6 @@ const Login = () => {
       sessionStorage.setItem("logueado", true);
       console.log(sessionStorage.logueado);
       sessionStorage.setItem("token", jsonResponse.token);
-      window.location.reload(false);
       navigate("/");
     } else {
       alert("Credenciales invalidas");
